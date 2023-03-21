@@ -32,10 +32,6 @@ local function open_readme_buffer(file_path)
         minheight = height,
     }
 
-    local buf_opts = {
-        modifiable = false,
-        filetype = markdown,
-    }
 
     local win = popup.create(bufnr, popup_opts)
 
