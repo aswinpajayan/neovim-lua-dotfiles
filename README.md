@@ -25,4 +25,12 @@
  nvim
  :PackerSync
  ```
- 
+ - install rigpgrep for livegrep 
+ ```
+ sudo apt install ripgrep
+ ```
+ - open nvim and use <leader>r to display shortcuts
+  ```
+  <leader>r 
+   leader is space key
+    ```
