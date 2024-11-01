@@ -1,7 +1,7 @@
 local signs = {
-    Error = " ",
-    Warning = " ",
-    Hint = " ",
+    Error = "",
+    Warning = "",
+    Hint = "",
     Information = " "
 }
 

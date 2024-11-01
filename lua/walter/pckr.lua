@@ -23,13 +23,15 @@ bootstrap_pckr()
 
 require('pckr').add{
     -- Packer is no longer supported, use pckr
-    'wbthomason/packer.nvim';
+    --'wbthomason/packer.nvim';
 
     -- fuzzy file finder
     {
         'nvim-telescope/telescope.nvim',
         requires = 'nvim-lua/plenary.nvim'
     };
+    -- tree-sitter
+    {'nvim-treesitter/nvim-treesitter', run =':TSUpdate'};
    
     -- color scheme
     -- Using Packer

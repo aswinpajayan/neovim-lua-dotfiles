@@ -1,11 +1,35 @@
-local lsp = require('lsp-zero').preset({
-  name = 'minimal',
-  set_lsp_keymaps = true,
-  manage_nvim_cmp = true,
-  suggest_lsp_servers = true,
+local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+local default_setup = function(server)
+  require('lspconfig')[server].setup({
+    capabilities = lsp_capabilities,
+  })
+end
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = {
+    default_setup,
+  },
 })
 
--- (Optional) Configure lua language server for neovim
---lsp.nvim_workspace()
+local cmp = require('cmp')
 
-lsp.setup()
+cmp.setup({
+  sources = {
+    {name = 'nvim_lsp'},
+  },
+  mapping = cmp.mapping.preset.insert({
+    -- Enter key confirms completion item
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+
+    -- Ctrl + space triggers completion menu
+    ['<C-Space>'] = cmp.mapping.complete(),
+  }),
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+})
