@@ -41,8 +41,8 @@
    <Space>tt   -> open term in new tab      <Space>tv   -> open term in vsplit
    <Esc>       -> terminal normal mode      <Space>th   -> open term in split
    <Space>ll   -> Open file explorer        <Space>ff   -> fuzzy file finder 
-   <Space>a    -> set harpoon bookmark      <Space>fg   -> fuzzy grep in folder
-   <Space>{n}  -> jump to nth harpoon       <Space>e    -> see all harpoon marks
+   <leader>a   -> add harpoon bookmark      <Space>fg   -> fuzzy grep in folder
+   <leader>{n} -> jump to nth harpoon       <Space>e    -> see all harpoon marks
    <C-{/}>   -> resize horzontal panes    <C-{/}>   -> resize vertical  panes 
    <Space>nv   -> new file in vertical      <Space>nh   -> newfile in horizontal  
    <Space>r    -> Display this cheatsheet   q/<Esc>     -> close this cheatsheet  

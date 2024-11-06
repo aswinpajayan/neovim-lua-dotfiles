@@ -32,15 +32,19 @@ require('pckr').add{
     };
     -- tree-sitter
     {'nvim-treesitter/nvim-treesitter', run =':TSUpdate'};
-   
     -- color scheme
     -- Using Packer
     'navarasu/onedark.nvim';
     { "catppuccin/nvim", as = "catppuccin" };
+    'sainnhe/sonokai';
 
     -- goto and hooks
-    'ThePrimeagen/harpoon';
-    'nvim-lua/plenary.nvim';
+    {"nvim-lua/plenary.nvim" };
+    {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    requires = { {"nvim-lua/plenary.nvim"} }
+    };
 
     --lsp plugins lsp-zero
     {
@@ -70,8 +74,7 @@ require('pckr').add{
     'nvim-tree/nvim-web-devicons';
     {
         'nvim-tree/nvim-tree.lua',
-        requires = 
-            'nvim-tree/nvim-web-devicons', -- optional
+        requires = 'nvim-tree/nvim-web-devicons', -- optional
     };
     -- display all the errors and quick fixes nicely
     {
