@@ -15,7 +15,7 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 
 vim.o.termguicolors = true
-vim.cmd.colorscheme "catppuccin"
+--vim.cmd.colorscheme "catppuccin"
 
 vim.cmd [[
   highlight Normal guibg=none
